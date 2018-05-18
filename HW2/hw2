@@ -1,0 +1,161 @@
+; Pedram safaei
+; HW 2
+; CS 326
+
+#|
+
+	Comment to the grader:
+	
+	I am using different notations than the one we usually do in the classroom
+	for example: 
+	instead of doing the below to check if the list is empty 
+	
+	(cond 
+		((null? T #f)))
+
+	I am using 
+	
+	(cond 
+		((equal? (length T) 0) #f ))
+	
+	which is doing the same thing
+
+	and I got rid of my displays which I used for debugging purposes, hence nothing will 	      happen if this is loaded to scheme interpreter. 
+
+|#
+
+#|
+	Question 1
+|#
+
+(define (subst x y L)
+      (cond 
+        ((equal? (length L) 0) '())
+        ((list? (car L)) (cons (subst x y (car L)) (subst x y (cdr L))))
+        ((eq? (car L) x) (cons y (subst x y (cdr L))))
+        (else 
+          (cons (car L) (subst x y (cdr L))))))
+
+
+#|
+	End of question 1
+|#
+
+#|
+	Question 2
+|#
+
+(define (all-different? L)
+      (cond
+        ((equal? (length L) 0) #t)
+        ((member (car L) (cdr L)) #f)
+        (else
+          (all-different? (cdr L)))))
+
+#|
+	End of Question 2
+|#
+
+
+#|
+	Question 3
+|#
+
+; suppliment
+
+(define T
+    '(13
+      (5
+       (1 () () )
+       (8 ()
+        (9 () () )))
+      (22
+       (17 () () )
+       (25 () () ))))
+ 
+ (define (val T)
+    (car T))
+
+ (define (left T)
+    (cadr T))
+
+ (define (right T)
+    (caddr T))
+
+; end of suppliments
+
+;part a
+
+(define (n-nodes T)
+    (cond 
+      ((equal? (length T) 0) 0)
+      (else (+ 1 (+ (n-nodes (left T)) (n-nodes (right T)))))))
+
+;end of part a
+
+;part b
+
+(define (n-leaves T)
+    (cond ((equal? (length T) 0) 0)
+      (else
+        (cond
+          ((equal? (+ (length (left T)) (length (right T))) 0) 1)
+           (else
+             (+ (n-leaves (left T)) (n-leaves (right T))))))))
+
+
+; end of part b
+
+; part c
+
+(define (height T)
+    (cond 
+      ((equal? (length T) 0) 0)
+      (else 
+        (+ 1 (max (height (left T)) (height (right T)))))))
+
+; end of part c
+
+;part d
+
+(define (postorder T)
+    (cond 
+      ((equal? (length T) 0) '())
+      (else
+        (append(postorder (left T)) (postorder (right T)) (list (val T))))))
+; end of part d
+
+#|
+	Question 4
+|#
+
+(define (flatten L)
+      (cond
+        ((equal? (length L) 0) '())
+        ((pair? (car L)) (append (flatten (car L)) (flatten (cdr L))))
+        (else
+          (cons (car L) (flatten (cdr L))))))
+
+
+#|
+	End of question 4
+|#
+
+#|
+	Extra Credit 
+|#
+
+(define (member-bst? V T)
+    (cond 
+      ((equal? (length T) 0) 
+       #f)
+    (else 
+      (cond 
+        ((equal? V (val T))
+         #t)
+        (else
+          (cond (( > V (val T)) (member-bst? V (right T)))
+            (else (member-bst? V (left T)))))))))
+#|
+	End of Extra Credit
+|#
