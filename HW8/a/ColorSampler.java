@@ -1,13 +1,3 @@
-
-/*
-  @file ColorSampler.java
-  @brief just a simple gui java program that implents the color sampler
-  @author pedram Safaei
-  @date May 7, 2018
-  @bug none that could be seen during the testing
-*/
-
-
 import java.io.*;
 import java.util.ArrayList;
 import java.awt.*;
