@@ -9,7 +9,6 @@ import java.awt.event.*;
 
 public class ColorSampler extends JFrame
 {
-    //btns for the program
     protected JButton buttonSave;
     protected JButton buttonReset;
     protected JButton RedUpBtn;
@@ -18,9 +17,6 @@ public class ColorSampler extends JFrame
     protected JButton GreenDownBtn;
     protected JButton BlueUpBtn;
     protected JButton BlueDownBtn;
-
-    //panel, we would have 3 since we have 1 for save and rest one for list and
-    //one for the windows that shows the color
     protected JPanel buttonPanel;
     protected JPanel selectPanel;
     protected JPanel leftPanel;
