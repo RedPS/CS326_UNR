@@ -20,9 +20,6 @@ public class ColorSampler extends JFrame
     protected JPanel buttonPanel;
     protected JPanel selectPanel;
     protected JPanel leftPanel;
-
-    //this is for choosing the color we have 3 field for rgb
-    //which is green, blue and red
     protected JTextField green;
     protected JTextField blue;
     protected JTextField red;
