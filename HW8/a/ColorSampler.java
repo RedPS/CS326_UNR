@@ -23,8 +23,6 @@ public class ColorSampler extends JFrame
     protected JTextField green;
     protected JTextField blue;
     protected JTextField red;
-
-    // list for the colors and window for showing the colors
     protected JList<String> listColors;
     protected DrawColor draw;
     protected ColorType currentColor;
@@ -32,8 +30,7 @@ public class ColorSampler extends JFrame
     protected String colorNames[];
     protected int listSize;
     protected int IndexForColor;
-
-
+    
     static ColorSampler program;
 
     //main methid whcih would try to run the program
