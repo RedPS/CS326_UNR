@@ -33,7 +33,6 @@ public class ColorSampler extends JFrame
     
     static ColorSampler program;
 
-    //main methid whcih would try to run the program
     public static void main (String[] args)
     {
         try
