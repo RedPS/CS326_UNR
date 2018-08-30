@@ -85,13 +85,9 @@ public class ColorSampler extends JFrame
         //blue
         BlueUpBtn.addActionListener( new ActionHandler() );
         BlueDownBtn.addActionListener( new ActionHandler() );
-
-
+        
         draw = new DrawColor();
-
-        //this is the best bounds for a 1080p display
-        //we wil probably have to change that for lower or higher
-        //resolution displays
+       
         draw.setBounds(10, 10, 200, 200);
 
         //our 3 panels, one for color window, one for list and one for save and rest at the btns
