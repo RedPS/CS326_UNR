@@ -59,10 +59,6 @@ public class ColorSampler extends JFrame
         buttonSave = new JButton("Save");
         buttonReset = new JButton("Reset");
 
-        /*
-        for thos secion we will beed + and - btn for all three variable
-        */
-
         //red
         RedUpBtn = new JButton("+");
         RedDownBtn = new JButton("-");
