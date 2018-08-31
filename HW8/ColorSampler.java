@@ -1,13 +1,3 @@
-
-/*
-  @file ColorSampler.java
-  @brief just a simple gui java program that implents the color sampler
-  @author pedram Safaei
-  @date May 7, 2018
-  @bug none that could be seen during the testing
-*/
-
-
 import java.io.*;
 import java.util.ArrayList;
 import java.awt.*;
@@ -19,7 +9,6 @@ import java.awt.event.*;
 
 public class ColorSampler extends JFrame
 {
-    //btns for the program
     protected JButton buttonSave;
     protected JButton buttonReset;
     protected JButton RedUpBtn;
@@ -28,20 +17,15 @@ public class ColorSampler extends JFrame
     protected JButton GreenDownBtn;
     protected JButton BlueUpBtn;
     protected JButton BlueDownBtn;
-
-    //panel, we would have 3 since we have 1 for save and rest one for list and
-    //one for the windows that shows the color
+    
     protected JPanel buttonPanel;
     protected JPanel selectPanel;
     protected JPanel leftPanel;
-
-    //this is for choosing the color we have 3 field for rgb
-    //which is green, blue and red
+    
     protected JTextField green;
     protected JTextField blue;
     protected JTextField red;
 
-    // list for the colors and window for showing the colors
     protected JList<String> listColors;
     protected DrawColor draw;
     protected ColorType currentColor;
@@ -53,7 +37,6 @@ public class ColorSampler extends JFrame
 
     static ColorSampler program;
 
-    //main methid whcih would try to run the program
     public static void main (String[] args)
     {
         try
