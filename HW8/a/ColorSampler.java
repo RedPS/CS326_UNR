@@ -90,7 +90,6 @@ public class ColorSampler extends JFrame
        
         draw.setBounds(10, 10, 200, 200);
 
-        //our 3 panels, one for color window, one for list and one for save and rest at the btns
         buttonPanel = new JPanel();
         leftPanel = new JPanel();
         selectPanel = new JPanel();
