@@ -90,17 +90,14 @@ public class ColorSampler extends JFrame
         BlueUpBtn.addActionListener( new ActionHandler() );
         BlueDownBtn.addActionListener( new ActionHandler() );
 
-
         draw = new DrawColor();
 
         draw.setBounds(10, 10, 200, 200);
 
-        //our 3 panels, one for color window, one for list and one for save and rest at the btns
         buttonPanel = new JPanel();
         leftPanel = new JPanel();
         selectPanel = new JPanel();
 
-        //load the original colors
         File infile = new File("colors.txt");
         if( !infile.exists() )
         {
