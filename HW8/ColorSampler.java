@@ -59,13 +59,8 @@ public class ColorSampler extends JFrame
         listColors = new JList<String>();
         listColors.addListSelectionListener( new ListHandler());
 
-        //we just need one set of save and rest
         buttonSave = new JButton("Save");
         buttonReset = new JButton("Reset");
-
-        /*
-        for thos secion we will beed + and - btn for all three variable
-        */
 
         //red
         RedUpBtn = new JButton("+");
